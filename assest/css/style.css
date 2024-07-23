@@ -613,6 +613,8 @@ button {
       "main"
       "main";
     gap: 0rem;
+    align-items: center;
+ justify-content: center;
   }
   nav {
     display: none;
