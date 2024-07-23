@@ -75,7 +75,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  margin-block-end: 5rem;
+  display: grid;
 }
 
 h1 {
@@ -102,8 +102,9 @@ h1 span {
   align-content: center;
   justify-content: center;
   background-color: var(--white);
-  padding-block: 20px;
   margin: 0;
+  padding-bottom:1rem;
+  padding-top:0.5rem;
 }
 .dashbord__list ul {
   display: flex;
@@ -204,10 +205,7 @@ select {
   text-align: center;
   padding: 0px;
 }
-.dashbord h4 {
-  margin: 12px;
-  text-align: center;
-}
+
 .fa {
   text-align: center;
   margin: 20px;
@@ -220,10 +218,11 @@ select {
   grid-area: main;
   margin: 0;
   padding: 1rem;
-  border-radius: 2.375rem 0rem 0rem 2.375rem;
+border-radius: 38px 0px 0px 38px;
+background-color: var(--snow);
+
 }
 .today {
-  margin-top: 2rem;
   padding-left: 1rem;
   display: flex;
   flex-direction: column;
@@ -260,7 +259,7 @@ select {
   margin: auto;
 }
 .second-row {
-  margin-block: 1rem;
+  padding: 1rem;
   display: flex;
   gap: 1rem;
 }
@@ -291,9 +290,9 @@ select {
   flex-direction: row;
   gap: 1rem;
 }
-img{
-    display: block;
-    max-width: 100%;
+img {
+  display: block;
+  max-width: 100%;
 }
 .start {
   margin-top: 2rem;
@@ -390,7 +389,7 @@ nav {
 .first-card,
 .second-card,
 .last-card {
-  max-width:33rem;
+  max-width: fit-content;
   border-radius: 2.5rem;
   background-color: var(--white);
   display: flex;
@@ -467,8 +466,8 @@ progress::-webkit-progress-bar {
   display: flex;
   gap: 1rem;
 }
-.two-card-container >*{
-    flex: 1;
+.two-card-container > * {
+  flex: 1;
 }
 
 .job-title {
@@ -581,7 +580,7 @@ button {
 }
 /* /////////////////////////////////////////large-screen///////////////////////////////////////////////////////////// */
 @media (width > 1000px) {
-  .wrapper {
+  .container {
     display: grid;
     grid-auto-rows: 80px;
     grid-template-areas:
@@ -601,6 +600,20 @@ button {
 }
 /* ///////////////////////////////////////mobile-view///////////////////////////////////////////////////////////// */
 @media (width <= 1000px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+  .container {
+        grid-template-areas:
+      "header"
+      "main"
+      "main"
+      "main"
+      "main";
+    gap: 0rem;
+  }
   nav {
     display: none;
     visibility: hidden;
@@ -611,7 +624,6 @@ button {
   .tasky-nav .dashbord {
     display: flex;
     visibility: visible;
-    margin-right: auto;
   }
   .tasky-nav .search-bar {
     display: none;
@@ -632,20 +644,17 @@ button {
   .first-card,
   .second-card,
   .last-card {
-   max-width:500px;
+    max-width: 400px;
   }
   .start {
     flex-direction: column;
     gap: 1rem;
-    max-width:500px;
+    max-width: 400px;
   }
-  #main {
-    transition: 0.5s;
-    padding: 20px;
-  }
+
   .side-menu {
     background-color: var(--white);
-    max-width:15rem;
+    max-width: 15rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -669,13 +678,12 @@ button {
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
     color: #8f8f8f;
     text-decoration: none;
     visibility: visible;
   }
   .card {
-    max-width:500px;
+    max-width: 400px;
   }
   .two-card-container {
     flex-direction: column;
@@ -693,7 +701,7 @@ button {
     flex-direction: column;
     flex-wrap: wrap;
   }
-   .prof {
+  .prof {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -703,10 +711,9 @@ button {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  .div{
+  .div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
   }
 }
