@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasky</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="assest/css/style.css" />
+    <!-- js -->
+    <script src="assest/js/tasky.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <nav class="tasky-nav">
+                <div class="dashbord">
+                    <button class="hamburger-menu">
+                        <span style="font-size: 30px; cursor: pointer" onclick="openNav()"><i
+                                class="fa">&#xf0c9;</i>Dashbord</span>
+                    </button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search Project ..." name="search" />
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="profile">
+                    <button><img src="assest/imgs/notification.png" /></button>
+                    <div class="text">
+                        <div class="user-name">Manjay Gupta</div>
+                        <div class="job-title">UX/UI Designer</div>
+                    </div>
+                    <div class="profile-pic">
+                        <button><img src="assest/imgs/profile-pic.png" alt="" /></button>
+                    </div>
+                </div>
+            </nav>
+            <!-- ////////////////////////////////////////////////////////////////////////// -->
+            <section class="side-menu" id="mySidenav">
+                <section class="logo-section">
+                    <div>
+                        <h1 class="logo">Task<span>y.</span></h1>
+                    </div>
+                </section>
+                <div class="dashbord__list">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <ul>
+                        <li>
+                            <a href="index.html"><img src="assest/imgs/black.png" alt="" />Dashbord</a>
+                        </li>
+                        <li>
+                            <a href="pages/analytic.html"><img src="assest/imgs/analytic.png" alt="" />Analytic</a>
+                        </li>
+                        <li>
+                            <a href="pages/timesheets.html"><img src="assest/imgs/Time-schedule.png"
+                                    alt="" />Timesheet</a>
+                        </li>
+                        <li>
+                            <a href="pages/todo.html"><img src="assest/imgs/todo.png" alt="" />Todo</a>
+                        </li>
+                        <li>
+                            <a href="pages/report.html"><img src="assest/imgs/report.png" alt="" />Report</a>
+                        </li>
+                        <li>
+                            <a href="pages/setting.html"><img src="assest/imgs/setting.png" alt="" />Setting</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="workspace">
+                    <div class="workspace__title">Workspace</div>
+                    <div class="workspace__dropdown">
+                        <select name="matrix" id="matrix">
+                            <option value="#">Matrix Domain</option>
+                            <option value="#">item1</option>
+                            <option value="#">item2</option>
+                            <option value="#">item3</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            <section class="main" id="main">
+                <div class="row-container">
+                    <div class="first-row">
+                        <div class="today">
+                            <h1 class="today__text">Today</h1>
+                            <h2 class="today__date">Mon 22, 2021 | 10:00 AM</h2>
+                        </div>
+                        <div class="start">
+                            <h3 class="start__text">Start Time Tracker</h3>
+                            <h2 class="start__icon">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- ////////////////////////first row end////////////////////////////////////////////////////////////// -->
+                    <div class="second-row">
+                        <div class="card first-col">
+                            <div class="card__title">
+                                Weekly Activity
+                                <div class="card__dot">:</div>
+                            </div>
+                            <div class="card__complete">
+                                0%
+                                <div class="card__image">
+                                    <img src="assest/imgs/activity.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /////////////////// -->
+                        <div class="card second-col">
+                            <div class="card__title">
+                                Worked This Week
+                                <div class="card__dot">:</div>
+                            </div>
+
+                            <div class="card__complete">
+                                40:00:05
+                                <div class="card__image">
+                                    <img src="assest/imgs/history.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ////////// -->
+                        <div class="card third-col">
+                            <div class="card__title">
+                                Project Worked
+                                <div class="card__dot">:</div>
+                            </div>
+                            <div class="card__complete">
+                                02
+                                <div class="card__image">
+                                    <img src="assest/imgs/Combined Shape.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ///////////////////////////////////// -->
+                    <div class="third-row">
+                        <section class="two-card-container">
+                            <div class="first-card">
+                                <div class="card-first-row">
+                                    <div class="card__title">
+                                        Recent Activity
+                                        <div class="card__dot">:</div>
+                                    </div>
+                                </div>
+                                <div class="card-second-row">
+                                    <div class="profile-row">
+                                        <div class="profile-picture">
+                                            <div class="prof">
+                                                <img src="assest/imgs/profile-pic.png" alt="" />
+                                                <div class="user">Rubik Sans</div>
+                                            </div>
+                                            <div class="veiw-button">
+                                                <button><a href="#">veiw All</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-third-row">
+                                    <div class="img-container">
+                                        <div class="img-row">
+                                            <div>
+                                                <img class="image" src="assest/imgs/first-fourth.png" alt="" />
+                                            </div>
+                                            <div>
+                                                <img class="image" src="assest/imgs/second.png" alt="" />
+                                            </div>
+                                            <div>
+                                                <img class="image" src="assest/imgs/third-last.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="img-row">
+                                            <div>
+                                                <img class="image" src="assest/imgs/first-fourth.png" alt="" />
+                                            </div>
+                                            <div>
+                                                <img class="image" src="assest/imgs/third-last.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ////////////////////////////////////////////////////// -->
+                            <div class="second-card">
+                                <div class="card__title">
+                                    Projects
+                                    <div class="card__dot">:</div>
+                                </div>
+                                <div class="project">
+                                    <div class="profile-picture">
+                                        <div class="prof">
+                                            <img src="assest/imgs/Combined Shape.png" alt="" />
+                                            <div class="user">Project one</div>
+                                        </div>
+                                        <div class="div">
+                                            <div class="pinky">00:40:00</div>
+                                            <progress value="90" max="100">90%</progress>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pro2 -->
+                                <div class="project">
+                                    <div class="profile-picture">
+                                        <div class="prof">
+                                            <img src="assest/imgs/Combined Shape.png" alt="" />
+                                            <div class="user">Project Two</div>
+                                        </div>
+                                        <div class="div">
+                                            <div class="pinky">00:10:00</div>
+                                            <progress value="40" max="100">40%</progress>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pro3 -->
+                                <div class="project">
+                                    <div class="profile-picture">
+                                        <div class="prof">
+                                            <img src="assest/imgs/Combined Shape.png" alt="" />
+                                            <div class="user">Project Three</div>
+                                        </div>
+                                        <div class="div">
+                                            <div class="pinky">00:20:00</div>
+                                            <progress value="60" max="100">60%</progress>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pro4 -->
+                                <div class="project">
+                                    <div class="profile-picture">
+                                        <div class="prof">
+                                            <img src="assest/imgs/Combined Shape.png" alt="" />
+                                            <div class="user">Project Four</div>
+                                        </div>
+                                        <div class="div">
+                                            <div class="pinky">00:30:00</div>
+                                            <progress value="80" max="100">80%</progress>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- button -->
+                                <button class="projectbtn"><a href="#">View All</a></button>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+                    <div class="fourth-row">
+                        <section class="two-card-container">
+                            <!-- card start -3rows-->
+                            <div class="first-card">
+                                <div class="card-first-row">
+                                    <div class="card__title">
+                                        Members
+                                        <div class="card__dot">:</div>
+                                    </div>
+
+                                    <div class="card-second-row">
+                                        <div class="gray-row">
+                                            <div class="word">
+                                                Member Info
+                                                <div class="div">
+                                                    <div class="word">Today</div>
+                                                    <div class="word">This Week</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-third-row">
+                                        <div class="project">
+                                            <div class="profile-picture">
+                                                <div class="prof">
+                                                    <img src="assest/imgs/profile-pic.png" alt="" />
+                                                    <div class="user">
+                                                        <div class="user-first-row">John Ekeler</div>
+                                                        <div class="user-second-row">Food Dashboard Design</div>
+                                                        <div class="user-third-row">Creating UI and Research</div>
+                                                    </div>
+                                                </div>
+                                                <div class="div">
+                                                    <div class="pinky">00:40:00</div>
+                                                    <div class="pinky">00:40:00</div>
+                                                </div>
+                                            </div>
+                                            <div class="project">
+                                                <div class="profile-picture">
+                                                    <div class="prof">
+                                                        <img src="assest/imgs/profile-pic.png" alt="" />
+                                                        <div class="user">
+                                                            <div class="user-first-row">Rubik Sans</div>
+                                                            <div class="user-second-row">Project Name</div>
+                                                            <div class="user-third-row">Creating UI and Research</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="div">
+                                                        <div class="pinky">00:40:00</div>
+                                                        <div class="pinky">00:40:00</div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- last card in last row --3rows-->
+                            <div class="last-card">
+                                <div class="card-first-row">
+                                    <div class="card__title">
+                                        To Do
+                                        <div class="card__dot">:</div>
+                                    </div>
+                                </div>
+                                <div class="gray-row">
+                                    <div class="word">
+                                        Member Info
+                                        <div class="div">
+                                            <div class="word">Time</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="card-second-row">
+                                    <div class="project">
+                                        <div class="profile-picture">
+                                            <div class="prof">
+                                                <img src="assest/imgs/Combined Shape.png" alt="" />
+                                                <div class="user">Research Development</div>
+                                            </div>
+                                            <div class="div">
+                                                <div class="pinky">00:40:00</div>
+                                                <progress value="90" max="100">90%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- pro4 -->
+                                    <div class="project">
+                                        <div class="profile-picture">
+                                            <div class="prof">
+                                                <img src="assest/imgs/Combined Shape.png" alt="" />
+                                                <div class="user">Research Development</div>
+                                            </div>
+                                            <div class="div">
+                                                <div class="pinky">00:20:00</div>
+                                                <progress value="90" max="100">90%</progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- button -->
+                                    <button class="projectbtn">
+                                        <a href="#">View Reports</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
