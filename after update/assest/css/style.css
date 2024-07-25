@@ -84,13 +84,15 @@ body {
   grid-template-rows: repeat(2, min-content);
   border: 1px solid red;
 
-  @media only screen and (max-width: 1276px) {
+  @media only screen and (max-width: 1000px) {
     .side-menu {
       z-index: 99;
       grid-column: 1/6;
       position: relative;
     }
-
+    .side-menu {
+      height: min-content;
+    }
     .closebtn {
       visibility: visible;
       display: flex;
@@ -129,16 +131,13 @@ body {
       align-content: start;
     }
   }
-  @media only screen and (max-width: 690px) {
+  @media only screen and (max-width: 1276px) {
     .select-item {
       display: grid;
       grid-template-rows: subgrid;
       grid-row: span2;
       row-gap: 1rem;
     }
-  }
-  .side-menu {
-    height: min-content;
   }
 }
 
