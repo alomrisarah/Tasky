@@ -89,10 +89,8 @@ body {
   /* ---------------------------------------------------------------------------------- */
   .side-menu {
     z-index: 2;
-    grid-column: 1/6;
     position: relative;
-        min-width: 250px;
-
+    width: 250px;
   }
   .side-menu {
     height: min-content;
@@ -108,7 +106,6 @@ body {
     display: flex;
   }
   .profile-picture .prof {
-    flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
     gap: 1rem;
@@ -123,13 +120,33 @@ body {
     max-width: 150px;
     width: auto;
   }
+  .img-row{
+    flex-wrap: wrap;
+  }
 
   .project,
-  .div,
-  .user-third-row {
+  .div {
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
+    gap: 1rem;
+  }
+  .project .profile{
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+  }
+  .profile-picture{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .user-first-row ,.user-second-row ,.user-third-row{
+    text-align: center;
+  }
+  .profile-row{
+    flex-direction: column;
     gap: 1rem;
   }
   .nav .search-bar,
@@ -142,12 +159,14 @@ body {
     display: flex;
     align-items: center;
   }
-
-  .row-container > *,
-  .third-row > * {
-    flex-wrap: wrap;
-    align-content: start;
+  .card,
+  .first-card,
+  .second-card,
+  .last-card {
+    width: 350px;
   }
+
+
 }
 @media only screen and (min-width: 1000px) and (max-width: 1300px) {
   /* ////////////////////////////////////////////////////// */
@@ -166,7 +185,7 @@ body {
 
   .side-menu {
     z-index: 2;
-    min-width: 250px;
+    width: 250px;
     position: relative;
   }
 
@@ -191,8 +210,6 @@ body {
   .div,
   .user-third-row {
     display: flex;
-    flex-direction: row;
-
     text-align: center;
     flex-wrap: nowrap;
   }
@@ -208,8 +225,13 @@ body {
   .third-row {
     flex-wrap: wrap;
   }
+  .main > * {
+    flex-wrap: wrap;
+    align-content: start;
+  }
 }
 
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .side-menu {
   grid-column: 1/4;
   grid-row: 1/-1;
@@ -225,7 +247,8 @@ body {
   grid-column: 4/-1;
   grid-row: 1/2;
   display: flex;
-justify-content: space-between;  align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--white);
   padding: 1rem 0.5rem;
   width: 100%;
@@ -568,7 +591,6 @@ img {
 }
 .profile-picture .prof {
   display: flex;
-  flex-direction: row;
 }
 .prof .user {
   font-family: var(--ff-poppins);
@@ -576,6 +598,9 @@ img {
   font-weight: var(--fw-semibold);
   line-height: 1.5rem;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
 }
 .profile-picture {
   display: flex;
